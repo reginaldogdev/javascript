@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de imigração</title>
+    <style>
+        div#res {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Imigração</h1>
+    Aonde você nasceu: <input type="text" name="country" id="country" placeholder="Digite aqui">
+    <input type="button" value="Verificar" onclick="imigracao()">
+    <div id="res">
+        
+    </div>
+
+    <script>
+        function imigracao() {
+            var paisNascimento = document.getElementById('country')
+            var res = document.getElementById('res')
+            var pais = country.value
+            res.innerHTML = `<p>Você nasceu no <strong>${pais}</strong></p>`
+            if (pais != 'Brasil') {
+                res.innerHTML += `<p>Você é <strong>Estrangeiro</strong>, por favor seguir a direita</p>`
+            } else {
+                res.innerHTML += `<p>Você é <strong>Brasileiro</strong>, por favor seguir a esquerda</p>`
+            }
+        }
+    </script>
+</body>
+</html>
